@@ -1,66 +1,66 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import Link from 'next/link';
+import Navbar from '../components/Navbar';
+import FeaturedListings from '../components/FeaturedListings';
+import Button from '../components/Button';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main>
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className="container">
+          <h1 className={styles.heroTitle}>
+            Medical Equipment Layout
+            <br />
+            Made Simple
+          </h1>
+          <p className={styles.heroSubtitle}>
+            The trusted marketplace for healthcare professionals to buy and sell premium new and refurbished medical equipment.
           </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+          <div className={styles.searchContainer}>
+            <input
+              type="text"
+              placeholder="Search for equipment (e.g., Ultrasound, MRI...)"
+              className={styles.searchInput}
             />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <Link href="/search">
+              <Button size="default">Search</Button>
+            </Link>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Featured Listings (Client Component) */}
+      <FeaturedListings />
+
+      {/* Features / Trust Section */}
+      <section className={`section ${styles.features}`}>
+        <div className="container">
+          <div className={styles.featureGrid}>
+            <div>
+              <div className={styles.featureIcon}>✓</div>
+              <h3 className={styles.featureTitle}>Verified Sellers</h3>
+              <p className={styles.featureText}>Every seller is vetted to ensure safe transactions and authentic equipment.</p>
+            </div>
+            <div>
+              <div className={styles.featureIcon}>$</div>
+              <h3 className={styles.featureTitle}>Fair Pricing</h3>
+              <p className={styles.featureText}>Transparent pricing on new and refurbished equipment from top manufacturers.</p>
+            </div>
+            <div>
+              <div className={styles.featureIcon}>♥</div>
+              <h3 className={styles.featureTitle}>Community Trust</h3>
+              <p className={styles.featureText}>Join thousands of medical professionals trusting our platform daily.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

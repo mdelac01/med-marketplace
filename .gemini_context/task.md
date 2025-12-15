@@ -1,0 +1,21 @@
+# Medical Marketplace Project Tasks
+
+- [x] Project Initialization
+    - [x] Create project directory
+    - [x] Initialize Next.js app
+- [x] Planning
+    - [x] Create implementation plan
+- [/] Implementation
+    - [x] Setup basic layout and design system (CSS)
+    - [x] Create Home Page with Search
+    - [x] Create Product Listing Page
+    - [x] Create Product Detail Page
+    - [x] Create Seller Dashboard
+    - [x] Create Add Product Form
+    - [x] Implement State Management (Context)
+    - [x] API Routes (GET/POST Products)
+    - [x] Implement Image Upload to Disk
+    - [x] Connect Context to API
+- [x] Verification
+    - [x] Verify flows
+    - [x] Verify Dashboard flows

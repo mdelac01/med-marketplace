@@ -1,0 +1,140 @@
+.pageContainer {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.imageSection {
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--gray-200);
+}
+
+.mainImageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.mainImage {
+    object-fit: cover;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 1rem;
+}
+
+.thumb {
+    width: 80px;
+    height: 80px;
+    background-color: var(--gray-100);
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumb:hover {
+    border-color: var(--primary-teal);
+}
+
+.detailsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.header {
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 1.5rem;
+}
+
+.category {
+    color: var(--primary-teal);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-blue);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.priceBlock {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--gray-900);
+}
+
+.condition {
+    background-color: var(--gray-100);
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--gray-600);
+}
+
+.sectionTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--gray-800);
+}
+
+.description {
+    color: var(--gray-600);
+    line-height: 1.7;
+}
+
+.specRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.specLabel {
+    color: var(--gray-600);
+}
+
+.specValue {
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+.actionBox {
+    background-color: var(--gray-50);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--gray-200);
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
