@@ -15,7 +15,7 @@ export default function Home() {
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.heroTitle}>
-            Medical Equipment Layout
+            Medical Equipment Marketplace
             <br />
             Made Simple
           </h1>
